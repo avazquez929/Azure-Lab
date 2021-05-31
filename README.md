@@ -2,11 +2,11 @@
 
 The files in this repository were used to configure the network depicted below.
 
-Images/diagram
+<img src="/Diagrams/Diagram.png">
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the .yml files may be used to install only certain pieces of it, such as Filebeat.
 
-  Ansible/
+  [Ansible Files](Ansible)
 
 This document contains the following details:
 - Description of the Topology
@@ -29,7 +29,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 -Metricbeat is used to monitor Server Metrics 
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name      | Function  | IP Address | Operating System |
 |-----------|-----------|------------|------------------|
@@ -44,7 +43,7 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the my home network based on security rules I put in place.
 
-Machines within the Web server’s network can only be accessed by SSH via port 22 from the Jumpbox Machine IP.
+Machines within the Web serverâ€™s network can only be accessed by SSH via port 22 from the Jumpbox Machine IP.
 The ELK server is only allowed to be accessed by my home network which allows for access via port 5601(kibana) or internally via ssh from the Jumpbox only because I peered the two networks to communicate with each other.
 
 A summary of the access policies in place can be found in the table below.
@@ -70,7 +69,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-(Images/elk.png)
+<img src="/README/Images/Elk.png">
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
